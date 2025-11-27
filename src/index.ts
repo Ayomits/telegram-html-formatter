@@ -10,11 +10,11 @@ function mention<T extends string | number>(usr: T) {
 }
 
 function bold<T extends string>(text: T): `<b>${T}</b>` {
-  return `<b>${withEscape(text)}</b>`;
+  return `<b>${escape(text)}</b>`;
 }
 
 function cursive<T extends string>(text: T): `<i>${T}</i>` {
-  return `<i>${withEscape(text)}</i>`;
+  return `<i>${escape(text)}</i>`;
 }
 
 function code<T extends string>(text: T): `<code>${T}</code>`;
@@ -29,21 +29,21 @@ function code<T extends string, L extends string | undefined = undefined>(
   lang?: L
 ) {
   if (lang) {
-    return `<pre language="${lang}">${withEscape(text)}</pre>`;
+    return `<pre language="${lang}">${escape(text)}</pre>`;
   }
 
-  return `<code>${withEscape(text)}</code>`;
+  return `<code>${escape(text)}</code>`;
 }
 
 function strike<T extends string>(text: T): `<s>${T}</s>` {
-  return `<s>${withEscape(text)}</s>`;
+  return `<s>${escape(text)}</s>`;
 }
 
 function underline<T extends string>(text: T): `<u>${T}</u>` {
-  return `<u>${withEscape(text)}</u>`;
+  return `<u>${escape(text)}</u>`;
 }
 
-function withEscape<T extends string>(s: T): T {
+function escape<T extends string>(s: T): T {
   const allowedTags = [
     "b",
     "strong",

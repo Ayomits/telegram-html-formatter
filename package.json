@@ -1,7 +1,7 @@
 {
   "name": "telegram-html-formatter",
   "version": "1.0.0",
-  "description": "Inspired by @discordjs/formatters library for grammy.js",
+  "description": "Inspired by @discordjs/formatters library",
   "main": "dist/index.js",
   "type": "module",
   "publishConfig": {
