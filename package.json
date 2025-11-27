@@ -1,5 +1,5 @@
 {
-  "name": "grammy-formatters",
+  "name": "telegram-html-formatter",
   "version": "1.0.0",
   "description": "Inspired by @discordjs/formatters library for grammy.js",
   "main": "dist/index.js",
